@@ -214,6 +214,10 @@ function setupAssets(app) {
     express.static(path.join(appRoot.path, "server/storage/files"))
   );
   app.use(
+      "/api/containers/files/upload",
+      express.static(path.join(appRoot.path, "server/storage/files"))
+  );
+  app.use(
     "/assets/fonts",
     express.static(path.join(appRoot.path, "node_modules/font-awesome/fonts"))
   );
